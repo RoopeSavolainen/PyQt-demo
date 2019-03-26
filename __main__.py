@@ -1,11 +1,11 @@
 import sys
 from PyQt5 import QtGui, QtWidgets
 
+import interface
+
 def main():
     app = QtWidgets.QApplication(sys.argv)
-    window = QtWidgets.QWidget()
-    window.setGeometry(100, 100, 480, 360)
-    window.setWindowTitle('Main window')
+    window = interface.create_gui()
     window.show()
     ret_code = app.exec_()
     sys.exit(ret_code)
